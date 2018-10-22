@@ -1,0 +1,33 @@
+
+     body {
+        background-color: rgb(0,0,255);
+        /* closest color (248,248,6) */
+        text-align: center;
+    }
+    
+    
+    
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo {
+        background:url("assets/hephaestuslogo.png") no-repeat center;
+        height: 500px;
+        width: 500px;
+        background-size: contain;
+    
+    }
+    
+    a {
+        background-color: #C7B6DC;
+        color: white;
+        padding: 14px 25px;
+        left: 0;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    
