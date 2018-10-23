@@ -133,7 +133,7 @@ function didCollideWithObject() {
         aphrodite.dialogue ="Hephaestus! Just the handsome devil I wanted to see! I heard you were appointed blacksmith of the Gods! And you want to be married. Normally I'd puke my guts out at the idea of touching you, but this newfound position of power you've gained is insanely attractive to say the least. Your bushy eyebrows don't remind me of disease riddled sewer rats as much as they used to...Hephaestus my love.....as long as I can manipulate your existence to benefit my own...I will cherish you."
         zeus.dialogue = "Yo Hephaestus! I heard about how you manipulated your mother in order to achieve you selfish, hate-filled desires! That's dope! I always hated that woman. She's such a nag! So I sleep with other women every other night! What's the big dealio huh!? She acts like these dumb wedding rings are like a symbol of our love and loyalty to one another or something ridiculous like that...I wish I was smart and talented enough to have come up with a revenge scheme like that."
         rando.dialogue ="I don't think you're ugly. You're a very nice man."
-
+        song.stop();
         loveSong.play();
     }
 
