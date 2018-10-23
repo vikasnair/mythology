@@ -135,11 +135,12 @@ function didCollideWithObject() {
         rando.dialogue ="I don't think you're ugly. You're a very nice man."
 
         loveSong.play();
-        console.log(`Hephaestus found a ${this.name}!`);
-        // drawTextBubble(this.name);
-        this.sprite.remove();
-        objects = objects.filter(object => object.name !== this.name);
     }
+
+    console.log(`Hephaestus found a ${this.name}!`);
+    // drawTextBubble(this.name);
+    this.sprite.remove();
+    objects = objects.filter(object => object.name !== this.name);
 }
 
 
