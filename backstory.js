@@ -45,7 +45,7 @@ function setup() {
 function draw() {
     background(bg);
     drawSprites();
-    drawViewPoint();
+    // drawViewPoint();
     detectCollisionWithNPCs();
     detectCollisionWithObjects();
     handleMovement();
@@ -58,6 +58,7 @@ function drawTextBubble(dialogue) {
     stroke("white");
     strokeWeight(5);
     fill("black");
+    rectMode(CENTER);
     rect(width / 2, height / 2, width - 100, height - 100);
     fill("white");
     noStroke();
@@ -65,7 +66,7 @@ function drawTextBubble(dialogue) {
     textSize(20);
     fill("white");
     textAlign(CENTER);
-    text(dialogue, width / 2, (height / 2) + 50, width - 150, height - 150);
+    text(dialogue, width / 2, height / 2, width - 100, height - 100);
 }
 
 function didCollideWithNPC() {

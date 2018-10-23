@@ -37,27 +37,28 @@ const rando = {
     sprite: undefined,
     name: 'Rando',
     dialogue: "Hm? Oh dont mind me. I'm just an ordinary man. I'm not all that important to the story or anything. I don't really have anything interesting to say.... Thank you for taking the time to talk to me though!"
-}
+};
+
 const respect = {
     sprite: undefined,
     name: 'respect',
     x: size / 10,
     y: size / 10
-}
+};
 
 const love = {
     sprite: undefined,
     name: 'love',
     x: 200,
     y: 350
-}
+};
 
 const marriage = {
     sprite: undefined,
     name: 'marriage',
     x: 50,
     y: 200
-}
+};
 
 const npcs = [hera, zeus, aphrodite];
 let objects = [respect, love, marriage];
@@ -67,24 +68,23 @@ let song, bg;
 function preload() {
     song = loadSound('assets/sounds/revenge.mp3');
     bg = loadImage('assets/spritesnframes/bg.png');
-};
+}
 
 function setup() {
     createCanvas(size, size);
     scale(60000.5);
     initializeSprites();
     song.play();
-};
-
+}
 
 function draw() {
     background(bg);
     drawSprites();
-    drawviewPoint();
+    // drawviewPoint();
     detectCollisionWithNPCs();
     detectCollisionWithObjects();
     handleMovement();
-};
+}
 
 function drawTextBubble(dialogue) {
     textAlign(CENTER);
@@ -93,6 +93,7 @@ function drawTextBubble(dialogue) {
     stroke("white");
     strokeWeight(5);
     fill("black");
+    rectMode(CENTER);
     rect(width / 2, height / 2, width - 100, height - 100);
     fill("white");
     noStroke();
@@ -100,8 +101,8 @@ function drawTextBubble(dialogue) {
     textSize(20);
     fill("white");
     textAlign(CENTER);
-    text(dialogue, width / 2, (height / 2) + 50, width - 150, height - 150);
-};
+    text(dialogue, width / 2, height / 2, width - 100, height - 100);
+}
 
 function didCollideWithNPC() {
     drawTextBubble(this.dialogue);
@@ -111,7 +112,7 @@ function detectCollisionWithNPCs() {
     for (const npc of npcs) {
         hephaestus.sprite.collide(npc.sprite, didCollideWithNPC.bind(npc));
     }
-};
+}
 
 function didCollideWithObject() {
     if (this.name === 'respect') {
@@ -155,6 +156,7 @@ function didCollideWithObject() {
     // drawTextBubble(this.name);
     this.sprite.remove();
     objects = objects.filter(object => object.name !== this.name);
+    }
 
 
 function detectCollisionWithObjects() {
@@ -188,7 +190,7 @@ function handleMovement() {
 function initializeSprites() {
     hephaestus.sprite = createSprite(width / 2, height / 2, characterSize, characterSize);
     hephaestus.sprite.addAnimation('still', 'assets/spritesnframes/Hephaestusstill.png');
-    hephaestus.sprite.addAnimation('up', 'assets/spritesnframes/Hephaestuswalkup001.png', 'assets/spritesnframes/Hephaestsuswalkup002.png');
+    hephaestus.sprite.addAnimation('up', 'assets/spritesnframes/Hephaestuswalkup001.png', 'assets/spritesnframes/Hephaestuswalkup002.png');
     hephaestus.sprite.addAnimation('right', 'assets/spritesnframes/Hephaestuswalkleft001.png', 'assets/spritesnframes/Hephaestuswalkleft002.png');
     hephaestus.sprite.addAnimation('down', 'assets/spritesnframes/Hephaestuswalkdown001.png', 'assets/spritesnframes/Hephaestuswalkdown002.png');
     hera.sprite = createSprite(100, 50, characterSize, characterSize);
@@ -214,9 +216,5 @@ function initializeSprites() {
             objects[i].sprite.addAnimation('treasurebox', 'assets/spritesnframes/treasurebox.png');
         }
         
-    }
-
-       
-       
-    }
+    }      
 }
