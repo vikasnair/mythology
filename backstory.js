@@ -101,11 +101,11 @@ function handleMovement() {
     if(keyIsDown(LEFT_ARROW)) {
         hephaestus.sprite.setSpeed(3, 180);
         hephaestus.sprite.changeAnimation('right');
-        hephaestus.sprite.mirrorX(-1);
+        hephaestus.sprite.mirrorX(1);
     } else if(keyIsDown(RIGHT_ARROW)) {
         hephaestus.sprite.setSpeed(3, 0);
         hephaestus.sprite.changeAnimation('right');
-        hephaestus.sprite.mirrorX(1);
+        hephaestus.sprite.mirrorX(-1);
     } else if(keyIsDown(UP_ARROW)) {
         hephaestus.sprite.setSpeed(3, 270);
         hephaestus.sprite.changeAnimation('up');
