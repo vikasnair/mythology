@@ -197,7 +197,7 @@ function initializeSprites() {
     rando.sprite = createSprite(size - 100, size - 100, characterSize, characterSize);
 
     for (let i = 0; i < npcs.length; i++) {
-        npcs[i].sprite.addAnimation('still', 'assets/spritesnframes/' + npcs[i].name.toLowerCase() + '.png');
+        npcs[i].sprite.addAnimation('still', 'assets/spritesnframes/' + npcs[i].name + '.png');
         npcs[i].sprite.changeAnimation('still');
     }
 

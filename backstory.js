@@ -32,7 +32,7 @@ let song, bg;
 
 function preload() {
     song = loadSound('assets/sounds/summer.mp3'); 
-    bg = loadImage('assets/frames/summersbg.png');
+    bg = loadImage('assets/spritesnframes/summersbg.png');
 }
 
 function setup() {
@@ -126,7 +126,7 @@ function initializeSprites() {
     fishman.sprite = createSprite(100, 50, characterSize, characterSize);
 
     for (let i = 0; i < npcs.length; i++) {
-        npcs[i].sprite.addAnimation('still', 'assets/spritesnframes/' + npcs[i].name.toLowerCase() + '.png');
+        npcs[i].sprite.addAnimation('still', 'assets/spritesnframes/' + npcs[i].name + '.png');
         npcs[i].sprite.changeAnimation('still');
     }
 
