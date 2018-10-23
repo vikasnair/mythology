@@ -129,20 +129,18 @@ function didCollideWithObject() {
         hephaestus.quests.marriage = true;
 
         hera.dialogue = 'You want to marry Aphrodite? Ehhh I dont know about that one. Seems kinda sleazy... if anything it should be Aphrodites choice who she loves! its not really my place to sell her like a trophy for my own benefit..HA! Did I fool you? Look at me talking as if I have silly ol "empathy" and "morals". What do I care about that blonde bimbo Aphrodite? I threw you off a mountain into the ocean when you were an infant for christ sake! You want to use your own mother as leverage as a part of your scheme to forcibly marry someone who doesnt want you in order to quench your pervy unrequited love? Youre a chip off the old block son! Consider it done! I can already hear the wedding bells a-ringin...'
-        aphrodite.dialogue ="Hephaestus! Just the handsome devil I wanted to see! I heard you were appointed blacksmith of the Gods! And you want to be married. Normally I'd puke my guts out at the idea of touching you, but this newfound position of power you've gained is insanely attractive to say the least. Your bushy eyebrows don't remind me of disease riddled sewer rats as much as they used to...Hephaestus my love.....as long as I can manipulate your existence to benefit my own...I will cherish you."}
+        aphrodite.dialogue ="Hephaestus! Just the handsome devil I wanted to see! I heard you were appointed blacksmith of the Gods! And you want to be married. Normally I'd puke my guts out at the idea of touching you, but this newfound position of power you've gained is insanely attractive to say the least. Your bushy eyebrows don't remind me of disease riddled sewer rats as much as they used to...Hephaestus my love.....as long as I can manipulate your existence to benefit my own...I will cherish you."
         zeus.dialogue = "Yo Hephaestus! I heard about how you manipulated your mother in order to achieve you selfish, hate-filled desires! That's dope! I always hated that woman. She's such a nag! So I sleep with other women every other night! What's the big dealio huh!? She acts like these dumb wedding rings are like a symbol of our love and loyalty to one another or something ridiculous like that...I wish I was smart and talented enough to have come up with a revenge scheme like that."
         rando.dialogue ="I don't think you're ugly. You're a very nice man."
 
         song = loadSound('assets/sounds/love.mp3');
         song.play();
-     };
-
-    
-    console.log(`Hephaestus found a ${this.name}!`);
-    // drawTextBubble(this.name);
-    this.sprite.remove();
-    objects = objects.filter(object => object.name !== this.name);
+        console.log(`Hephaestus found a ${this.name}!`);
+        // drawTextBubble(this.name);
+        this.sprite.remove();
+        objects = objects.filter(object => object.name !== this.name);
     }
+}
 
 
 function detectCollisionWithObjects() {
