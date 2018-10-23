@@ -31,7 +31,7 @@ let objects = [hammer];
 let song, bg;
 
 function preload() {
-    song = loadSound('assets/sounds/summers_eternal.mp3'); 
+    song = loadSound('assets/sounds/summer.mp3'); 
     bg = loadImage('assets/frames/summersbg.png');
 }
 

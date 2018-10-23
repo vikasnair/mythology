@@ -65,7 +65,7 @@ let objects = [respect, love, marriage];
 let song, bg;
 
 function preload() {
-    song = loadSound('assets/sounds/unfounded_revenge.mp3');
+    song = loadSound('assets/sounds/revenge.mp3');
     bg = loadImage('assets/spritesnframes/bg.png');
 };
 
@@ -144,7 +144,8 @@ function didCollideWithObject() {
 
         if (this.name === 'marriage') {
             hephaestus.quests.marriage = true;
-            song = loadSound('assets/sounds/because_iloveyou.mp3');
+            song = loadSound('assets/sounds/love.mp3');
+            song.play();
         }
         
      };
@@ -218,9 +219,4 @@ function initializeSprites() {
        
        
     }
-}
-
-if (this.name === 'marriage') {
-    hephaestus.quests.marriage = true;
-    song.play('assets/sounds/because_iloveyou.mp3')
 }
