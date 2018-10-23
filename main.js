@@ -63,10 +63,11 @@ const marriage = {
 const npcs = [hera, zeus, aphrodite];
 let objects = [respect, love, marriage];
 
-let song, bg;
+let song, loveSong, bg;
 
 function preload() {
     song = loadSound('assets/sounds/revenge.mp3');
+    loveSong = loadSound('assets/sounds/love.mp3');
     bg = loadImage('assets/spritesnframes/bg.png');
 }
 
@@ -133,8 +134,7 @@ function didCollideWithObject() {
         zeus.dialogue = "Yo Hephaestus! I heard about how you manipulated your mother in order to achieve you selfish, hate-filled desires! That's dope! I always hated that woman. She's such a nag! So I sleep with other women every other night! What's the big dealio huh!? She acts like these dumb wedding rings are like a symbol of our love and loyalty to one another or something ridiculous like that...I wish I was smart and talented enough to have come up with a revenge scheme like that."
         rando.dialogue ="I don't think you're ugly. You're a very nice man."
 
-        song = loadSound('assets/sounds/love.mp3');
-        song.play();
+        loveSong.play();
         console.log(`Hephaestus found a ${this.name}!`);
         // drawTextBubble(this.name);
         this.sprite.remove();
